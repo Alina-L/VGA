@@ -1,9 +1,13 @@
 // default values for 1024 X 768 @ 70 Hz
+// polarity is negative (0) or positive (1)
 
 	parameter screen_refresh_rate = 70,
 	parameter vertical refresh = 56.4759,
 	parameter pixel_freq = 75,
- 
+ 	
+	parameter h_sync_polarity = 0, 	
+	parameter v_sync_polarity = 0,		
+
 	parameter h_visible_area_pixels = 1024,
 	parameter h_front_porch_pixels = 24,
 	parameter h_sync_pulse_pixels = 136,
