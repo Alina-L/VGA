@@ -1,0 +1,15 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Jul  4 14:52:53 2016
+
+drc -z TOP.ncd TOP.pcf
+
+ERROR:PhysDesignRules:368 - The signal <HSYNC_OBUF> is incomplete. The signal is
+   not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <VSYNC_OBUF> is incomplete. The signal is
+   not driven by any source pin in the design.
+ERROR:PhysDesignRules:10 - The network <HSYNC_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <VSYNC_OBUF> is completely unrouted.
+ERROR:Bitgen:25 - DRC detected 4 errors and 0 warnings.  Please see the
+   previously displayed individual error or warning messages for more details.
