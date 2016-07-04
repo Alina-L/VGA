@@ -1,6 +1,6 @@
-// default values for 1024 X 768
+// default values for 1024 X 768 @ 70 Hz
 
- #(parameter screen_refresh_rate = 70,
+	parameter screen_refresh_rate = 70,
 	parameter vertical refresh = 56.4759,
 	parameter pixel_freq = 75,
  
@@ -27,4 +27,4 @@
 	parameter v_sync_pulse_time = 0.106,
 	parameter v_back_porch_time = 0.513,
 	parameter v_whole_line_time = 14.271,
-)
+
