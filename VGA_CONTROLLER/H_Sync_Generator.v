@@ -4,6 +4,7 @@ module H_Sync_Generator #(parameter ZERO = 0,
 												COUNTER_SIZE = 2'b11)(
 		
 		input 						control_clock,
+		output 				  counter_out_hsync,
 		output 		 						 h_sync
     );
 	 
@@ -14,6 +15,7 @@ module H_Sync_Generator #(parameter ZERO = 0,
 	 #(ZERO, THRESHOLD_HSYNC, WHOLE_FRAME, COUNTER_SIZE) Counter_With_Zero_And_Threshold_Detect(
 		.control_clock(control_clock),
 		.threshold_detected(threshold_detected),
+		.counter_out(counter_out_hsync),
 		.zero_detected(zero_detected)
 		);
 	 
