@@ -12,8 +12,9 @@ module Enabled_Counter_With_Zero_And_Threshold_Detect
 		
 		wire [COUNTER_SIZE - 1 : 0] counter_output;
 	
-		Counter #(COUNTER_SIZE, WHOLE_FRAME) Counter(
+		Counter_With_Enable #(COUNTER_SIZE, WHOLE_FRAME) Counter(
 			.control_clock(control_clock),
+			.counter_enable(counter_enable),
 			.counter_output(counter_output)
 		);
 		

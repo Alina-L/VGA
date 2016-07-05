@@ -1,8 +1,8 @@
 module VGA_Controller #(parameter ZERO = 0, 
-											 THRESHOLD_HSYNC   = 11'b10000110000,
-											 THRESHOLD_VSYNC   = 11'b10000110000,
-											 WHOLE_FRAME_VERTICAL = 11'b10100110000,
-											 WHOLE_FRAME_HORIZONTAL = 806,
+											 THRESHOLD_HSYNC   = 11'd1024,
+											 THRESHOLD_VSYNC   = 11'd768,
+											 WHOLE_FRAME_HORIZONTAL = 11'd1368,
+											 WHOLE_FRAME_VERTICAL = 11'd806,
 											 COUNTER_SIZE = 11)(
 		input 	control_clock,
 		output 			 v_sync,

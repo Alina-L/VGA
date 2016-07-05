@@ -1,7 +1,7 @@
 module H_Sync_Generator #(parameter ZERO = 0, 
 												THRESHOLD_HSYNC   = 11'b10000110000, 
 												WHOLE_FRAME = 11'b10100110000,
-												COUNTER_SIZE = 11)(
+												COUNTER_SIZE = 2'b11)(
 		
 		input 						control_clock,
 		output 		 						 h_sync

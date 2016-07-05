@@ -7,8 +7,8 @@ module Sync_Generator(
 	 reg internal;
 
 	always@(*)
-		if(reset) internal  <= 1;
-		else if(set) internal <= 0;
+		if(reset) internal  = 1;
+		else if(set) internal = 0;
 		
 		
 	assign sync = internal;

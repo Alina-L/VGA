@@ -10,7 +10,7 @@ module Counter_With_Enable #(parameter COUNTER_SIZE = 11,
 	 always @ (posedge control_clock) begin
 		if(internal_register >= WHOLE_FRAME)
 			internal_register <= 0;
-		else if(counter_enable)
+		else if(!counter_enable)
 			internal_register <= internal_register + 1;
 			  else internal_register <= internal_register;
 	 end

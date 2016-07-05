@@ -2,10 +2,10 @@ module Test_Module_VGA_Controller();
 
 		parameter CLOCK_PERIOD = 12;
 		parameter ZERO = 0; 
-		parameter THRESHOLD_HSYNC   = 11'd135;
-		parameter THRESHOLD_VSYNC   = 11'd5;
-		parameter WHOLE_FRAME_VERTICAL =   11'b10100110000;
-		parameter WHOLE_FRAME_HORIZONTAL = 11'b01100100110;
+		parameter THRESHOLD_HSYNC   = 11'd1024;
+		parameter THRESHOLD_VSYNC   = 11'd768;
+		parameter WHOLE_FRAME_VERTICAL =   11'd1368;
+		parameter WHOLE_FRAME_HORIZONTAL = 11'd806;
 		parameter COUNTER_SIZE = 11;
 		
 		
