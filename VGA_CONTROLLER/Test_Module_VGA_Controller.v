@@ -12,6 +12,8 @@ module Test_Module_VGA_Controller();
 		reg 	CLOCK;
 		wire v_sync;
 		wire h_sync;
+		wire counter_out_vsync;
+		wire counter_out_hsync;
 
 		VGA_Controller #(ZERO, 
 							  THRESHOLD_HSYNC, 
@@ -21,6 +23,8 @@ module Test_Module_VGA_Controller();
 							  COUNTER_SIZE ) 					  
 		DUT(
 		.control_clock(CLOCK),
+		.counter_out_vsync(counter_out_vsync),
+		.counter_out_hsync(counter_out_hsync),
 		.v_sync(v_sync),
 		.h_sync(h_sync)
     );

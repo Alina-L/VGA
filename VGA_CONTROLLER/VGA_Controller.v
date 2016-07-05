@@ -6,8 +6,10 @@ module VGA_Controller #(parameter ZERO = 0,
 											 COUNTER_SIZE 		 =  4'd 11)(
 											 
 		input 	control_clock,
-		output 			 v_sync,
-		output 			 h_sync
+		output			counter_out_hsync,
+		output			counter_out_vsync,
+		output 			 			  v_sync,
+		output 			 			  h_sync
     );
 
 	H_Sync_Generator #(ZERO, 
@@ -16,6 +18,7 @@ module VGA_Controller #(parameter ZERO = 0,
 							 COUNTER_SIZE) 
 	H_Sync_Generator (
 		.control_clock(control_clock),
+		.counter_out_hsync(counter_out_hsync),
 		.h_sync(h_sync)
     );
 	 
@@ -26,6 +29,7 @@ module VGA_Controller #(parameter ZERO = 0,
 	V_Sync_Generator(
 		.control_clock(control_clock),
 		.v_sync(v_sync),
+		.counter_out_vsync(counter_out_vsync),
 		.enable(h_sync)
 	 );
 	

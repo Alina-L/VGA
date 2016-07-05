@@ -6,6 +6,7 @@ module Counter_With_Zero_And_Threshold_Detect
 				  COUNTER_SIZE = 11'd11)(
     input  control_clock,
 	 output zero_detected,
+	 output [COUNTER_SIZE - 1 : 0] counter_out,
 	 output threshold_detected
 	 );
 		
@@ -25,5 +26,7 @@ module Counter_With_Zero_And_Threshold_Detect
 			.data_to_compare(counter_output),
 			.enabled(threshold_detected)
 		);
+		
+		assign counter_out = counter_output;
 		
 endmodule
