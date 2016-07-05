@@ -4,7 +4,7 @@ module Counter #(parameter COUNTER_SIZE = 11,
 		output [COUNTER_SIZE - 1 : 0] 					counter_output
     );
 	 
-		reg 	 [COUNTER_SIZE - 1 : 0]   		  internal_register = 0;
+		reg [COUNTER_SIZE - 1 : 0]   		  internal_register = 0;
 	 
 	 always @ (posedge control_clock) begin
 		if(internal_register >= WHOLE_FRAME)

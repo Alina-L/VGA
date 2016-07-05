@@ -3,7 +3,7 @@ module Counter_With_Zero_And_Threshold_Detect
 	 parameter ZERO = 0, 
 				  THRESHOLD   = 11'b10000110000, 
 				  WHOLE_FRAME = 11'b10100110000,
-				  COUNTER_SIZE = 11)(
+				  COUNTER_SIZE = 11'd11)(
     input  control_clock,
 	 output zero_detected,
 	 output threshold_detected

@@ -1,20 +1,25 @@
 module Test_Module_VGA_Controller();
 
-		parameter CLOCK_PERIOD = 12;
+		parameter CLOCK_PERIOD 		 = 		12;
 		parameter ZERO = 0; 
 		parameter THRESHOLD_HSYNC   = 11'd1024;
-		parameter THRESHOLD_VSYNC   = 11'd768;
-		parameter WHOLE_FRAME_VERTICAL =   11'd1368;
-		parameter WHOLE_FRAME_HORIZONTAL = 11'd806;
-		parameter COUNTER_SIZE = 11;
+		parameter THRESHOLD_VSYNC   = 11'd 768;
+		parameter WHOLE_LINE 		 = 11'd1368;
+		parameter WHOLE_FRAME 		 = 11'd 806;
+		parameter COUNTER_SIZE 		 =  4'd  11;
 		
 		
-		reg 						CLOCK;
+		reg 	CLOCK;
 		wire v_sync;
 		wire h_sync;
 
-		VGA_Controller #(ZERO, THRESHOLD_HSYNC, THRESHOLD_VSYNC, WHOLE_FRAME_VERTICAL, WHOLE_FRAME_HORIZONTAL,
-									COUNTER_SIZE ) DUT(
+		VGA_Controller #(ZERO, 
+							  THRESHOLD_HSYNC, 
+							  THRESHOLD_VSYNC, 
+							  WHOLE_LINE,
+							  WHOLE_FRAME,
+							  COUNTER_SIZE ) 					  
+		DUT(
 		.control_clock(CLOCK),
 		.v_sync(v_sync),
 		.h_sync(h_sync)

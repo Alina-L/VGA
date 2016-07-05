@@ -11,9 +11,13 @@ module V_Sync_Generator #(parameter ZERO = 0,
 	 wire zero_detected		;
 
 	 Enabled_Counter_With_Zero_And_Threshold_Detect
-	 #(ZERO, THRESHOLD_VSYNC, WHOLE_FRAME, COUNTER_SIZE) Enabled_Counter_With_Zero_And_Threshold_Detect(
-		.control_clock(control_clock),
-		.counter_enable(enable),
+	 #(ZERO, 
+		THRESHOLD_VSYNC, 
+		WHOLE_FRAME, 
+		COUNTER_SIZE) 
+	 Enabled_Counter_With_Zero_And_Threshold_Detect(
+		.control_clock(enable),
+		.counter_enable(1),
 		.threshold_detected(threshold_detected),
 		.zero_detected(zero_detected)
 		);
