@@ -69,6 +69,11 @@ always @ (*) begin
 		 G = PIXEL_DATA[4:2];
 		 B = PIXEL_DATA[1:0];
 	end
+	else begin
+		 R = 0;
+		 G = 0;
+		 B = 0;
+	end
 end
 
 

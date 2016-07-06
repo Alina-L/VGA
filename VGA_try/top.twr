@@ -44,19 +44,27 @@ Clock FCLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-DISPLAY_EN  |    7.463(R)|VGACLK            |   0.000|
-HSYNC       |    6.448(R)|VGACLK            |   0.000|
-POS_X<0>    |    5.071(R)|VGACLK            |   0.000|
-POS_X<1>    |    5.520(R)|VGACLK            |   0.000|
-POS_X<2>    |    4.984(R)|VGACLK            |   0.000|
-POS_X<3>    |    5.126(R)|VGACLK            |   0.000|
-POS_X<4>    |    5.263(R)|VGACLK            |   0.000|
-POS_X<5>    |    4.797(R)|VGACLK            |   0.000|
-POS_X<6>    |    4.802(R)|VGACLK            |   0.000|
-POS_X<7>    |    5.228(R)|VGACLK            |   0.000|
-POS_X<8>    |    5.063(R)|VGACLK            |   0.000|
-POS_X<9>    |    4.993(R)|VGACLK            |   0.000|
-POS_X<10>   |    4.949(R)|VGACLK            |   0.000|
+B<0>        |    8.505(R)|VGACLK            |   0.000|
+B<1>        |    8.792(R)|VGACLK            |   0.000|
+DISPLAY_EN  |    6.704(R)|VGACLK            |   0.000|
+G<0>        |    8.213(R)|VGACLK            |   0.000|
+G<1>        |    7.715(R)|VGACLK            |   0.000|
+G<2>        |    8.611(R)|VGACLK            |   0.000|
+HSYNC       |    6.413(R)|VGACLK            |   0.000|
+POS_X<0>    |    5.966(R)|VGACLK            |   0.000|
+POS_X<1>    |    5.307(R)|VGACLK            |   0.000|
+POS_X<2>    |    5.595(R)|VGACLK            |   0.000|
+POS_X<3>    |    5.678(R)|VGACLK            |   0.000|
+POS_X<4>    |    6.575(R)|VGACLK            |   0.000|
+POS_X<5>    |    6.103(R)|VGACLK            |   0.000|
+POS_X<6>    |    6.325(R)|VGACLK            |   0.000|
+POS_X<7>    |    4.984(R)|VGACLK            |   0.000|
+POS_X<8>    |    5.697(R)|VGACLK            |   0.000|
+POS_X<9>    |    5.630(R)|VGACLK            |   0.000|
+POS_X<10>   |    5.030(R)|VGACLK            |   0.000|
+R<0>        |    7.920(R)|VGACLK            |   0.000|
+R<1>        |    7.897(R)|VGACLK            |   0.000|
+R<2>        |    8.540(R)|VGACLK            |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock FCLK
@@ -64,11 +72,25 @@ Clock to Setup on destination clock FCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-FCLK           |    5.049|         |         |         |
+FCLK           |    4.623|         |         |         |
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+PIXEL_DATA<0>  |B<0>           |    9.023|
+PIXEL_DATA<1>  |B<1>           |    9.080|
+PIXEL_DATA<2>  |G<0>           |    8.118|
+PIXEL_DATA<3>  |G<1>           |    7.534|
+PIXEL_DATA<4>  |G<2>           |    7.691|
+PIXEL_DATA<5>  |R<0>           |    7.559|
+PIXEL_DATA<6>  |R<1>           |    7.132|
+PIXEL_DATA<7>  |R<2>           |    7.008|
+---------------+---------------+---------+
 
-Analysis completed Wed Jul  6 14:23:14 2016 
+
+Analysis completed Wed Jul  6 14:33:15 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
