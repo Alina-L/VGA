@@ -13,20 +13,21 @@ module top(
 	input 							 RST_IN
 );
 
-	parameter SYNC_PULSE_VERTICAL   			= 11'd6;
-	parameter WHOLE_FRAME_VERTICAL  			= 11'd806;
-	parameter FRONT_PORCH_VERTICAL  			= 11'd3;
-	parameter BACK_PORCH_VERTICAL   			= 11'd29;
-	parameter VISIBLE_AREA_VERTICAL 			= 11'd768;
+	parameter SYNC_PULSE_VERTICAL   			= 11'd3;
+	parameter WHOLE_FRAME_VERTICAL  			= 11'd1066;
+	parameter FRONT_PORCH_VERTICAL  			= 11'd10;
+	parameter BACK_PORCH_VERTICAL   			= 11'd38;
+	parameter VISIBLE_AREA_VERTICAL 			= 11'd1024;
 	
-	parameter SYNC_PULSE_HORIZONTAL 			= 11'd136;
-	parameter WHOLE_LINE_HORIZONTAL 			= 11'd1328;
-	parameter FRONT_PORCH_HORIZONTAL 		= 11'd24;
-	parameter BACK_PORCH_HORIZONTAL 			= 11'd144;
-	parameter VISIBLE_AREA_HORIZONTAL 		= 11'd1024;
+	parameter SYNC_PULSE_HORIZONTAL 			= 11'd112;
+	parameter WHOLE_LINE_HORIZONTAL 			= 11'd1688;
+	parameter FRONT_PORCH_HORIZONTAL 		= 11'd120;
+	parameter BACK_PORCH_HORIZONTAL 			= 11'd248;
+	parameter VISIBLE_AREA_HORIZONTAL 		= 11'd1280;
+	
 
-//	wire 								 en_hoz;
-//	wire 								 en_ver;
+	wire 								 en_hoz;
+	wire 								 en_ver;
 	wire 								 VGACLK;
 	wire 							  CLK0_OUT;
 	wire 						   LOCKED_OUT;
@@ -58,11 +59,12 @@ vertical_count #(
 	.slow_clock(VGACLK), .enable(HSYNC), .out_vertical_counter(POS_Y), .vsync(VSYNC), .enable_display_vertically(en_ver)
 );
 
-assign DISPLAY_EN = /*en_hoz && en_ver;*/ (POS_X > SYNC_PULSE_HORIZONTAL + FRONT_PORCH_HORIZONTAL) &
+assign DISPLAY_EN = en_hoz&&en_ver;
+							/*(POS_X > SYNC_PULSE_HORIZONTAL + FRONT_PORCH_HORIZONTAL) &
 						  (POS_X < WHOLE_LINE_HORIZONTAL - BACK_PORCH_HORIZONTAL)&
 						  (POS_Y > SYNC_PULSE_HORIZONTAL + FRONT_PORCH_HORIZONTAL) &
 						  (POS_Y < WHOLE_FRAME_VERTICAL - BACK_PORCH_HORIZONTAL);
-
+							*/
 always @ (*) begin
 	if (DISPLAY_EN) begin
 		 R = PIXEL_DATA[7:5];
