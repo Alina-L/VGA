@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-olympus05::  Wed Jul 06 14:33:08 2016
+olympus05::  Wed Jul 06 14:38:36 2016
 
 par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
 
@@ -204,7 +204,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 5 secs 
 Total CPU time to PAR completion: 5 secs 
 
-Peak Memory Usage:  602 MB
+Peak Memory Usage:  603 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

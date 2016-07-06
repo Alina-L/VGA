@@ -58,11 +58,11 @@ vertical_count #(
 	.slow_clock(VGACLK), .enable(HSYNC), .out_vertical_counter(POS_Y), .vsync(VSYNC), .enable_display_vertically(en_ver)
 );
 
-assign DISPLAY_EN = en_hoz && en_ver; /*(POS_X > SYNC_PULSE_HORIZONTAL + FRONT_PORCH_HORIZONTAL) &
+assign DISPLAY_EN = /*en_hoz && en_ver;*/ (POS_X > SYNC_PULSE_HORIZONTAL + FRONT_PORCH_HORIZONTAL) &
 						  (POS_X < WHOLE_LINE_HORIZONTAL - BACK_PORCH_HORIZONTAL)&
 						  (POS_Y > SYNC_PULSE_HORIZONTAL + FRONT_PORCH_HORIZONTAL) &
 						  (POS_Y < WHOLE_FRAME_VERTICAL - BACK_PORCH_HORIZONTAL);
-*/
+
 always @ (*) begin
 	if (DISPLAY_EN) begin
 		 R = PIXEL_DATA[7:5];
