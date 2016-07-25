@@ -12,18 +12,19 @@ module top(
 	output 							  VSYNC,
 	input 							 RST_IN
 );
-
-	parameter SYNC_PULSE_VERTICAL   			= 11'd3;
-	parameter WHOLE_FRAME_VERTICAL  			= 11'd1066;
-	parameter FRONT_PORCH_VERTICAL  			= 11'd10;
-	parameter BACK_PORCH_VERTICAL   			= 11'd38;
-	parameter VISIBLE_AREA_VERTICAL 			= 11'd1024;
+wire [3:0] GRID_Y;
+wire [3:0] GRID_X;
+	parameter SYNC_PULSE_VERTICAL   			= 11'd2;
+	parameter WHOLE_FRAME_VERTICAL  			= 11'd449;
+	parameter FRONT_PORCH_VERTICAL  			= 11'd37;
+	parameter BACK_PORCH_VERTICAL   			= 11'd60;
+	parameter VISIBLE_AREA_VERTICAL 			= 11'd350;
 	
-	parameter SYNC_PULSE_HORIZONTAL 			= 11'd112;
-	parameter WHOLE_LINE_HORIZONTAL 			= 11'd1688;
-	parameter FRONT_PORCH_HORIZONTAL 		= 11'd120;
-	parameter BACK_PORCH_HORIZONTAL 			= 11'd248;
-	parameter VISIBLE_AREA_HORIZONTAL 		= 11'd1280;
+	parameter SYNC_PULSE_HORIZONTAL 			= 11'd96;
+	parameter WHOLE_LINE_HORIZONTAL 			= 11'd800;
+	parameter FRONT_PORCH_HORIZONTAL 		= 11'd16;
+	parameter BACK_PORCH_HORIZONTAL 			= 11'd48;
+	parameter VISIBLE_AREA_HORIZONTAL 		= 11'd640;
 	
 
 	wire 								 en_hoz;
@@ -39,6 +40,9 @@ DCM_DIVIDER instance_name (
    .CLK0_OUT					(CLK0_OUT), 
    .LOCKED_OUT(LOCKED_OUT)
     );
+gridEnforcer myGrid(
+.POS_X(POS_X), .POS_Y(POS_Y), .GRID_X(GRID_X), .GRID_Y(GRID_Y)
+);	 
 	 
 horizontal_count #(
 	SYNC_PULSE_HORIZONTAL,
@@ -67,9 +71,16 @@ assign DISPLAY_EN = en_hoz&&en_ver;
 							*/
 always @ (*) begin
 	if (DISPLAY_EN) begin
+		if(GRID_X == 0 || GRID_X == 2 || GRID_X == 4 ||GRID_X == 6 ||  GRID_X == 8 || GRID_X == 10 || GRID_X == 12 || GRID_X == 14 ||GRID_X == 16 ||  GRID_X == 18) begin
 		 R = PIXEL_DATA[7:5];
 		 G = PIXEL_DATA[4:2];
 		 B = PIXEL_DATA[1:0];
+		 end
+		else begin
+		 R = ~PIXEL_DATA[7:5];
+		 G = ~PIXEL_DATA[4:2];
+		 B = ~PIXEL_DATA[1:0];
+		 end
 	end
 	else begin
 		 R = 0;

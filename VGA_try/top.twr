@@ -44,27 +44,27 @@ Clock FCLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-B<0>        |    9.071(R)|VGACLK            |   0.000|
-B<1>        |    9.026(R)|VGACLK            |   0.000|
-DISPLAY_EN  |    7.403(R)|VGACLK            |   0.000|
-G<0>        |    8.571(R)|VGACLK            |   0.000|
-G<1>        |    7.914(R)|VGACLK            |   0.000|
-G<2>        |    8.529(R)|VGACLK            |   0.000|
-HSYNC       |    5.740(R)|VGACLK            |   0.000|
-POS_X<0>    |    5.420(R)|VGACLK            |   0.000|
-POS_X<1>    |    5.364(R)|VGACLK            |   0.000|
-POS_X<2>    |    5.265(R)|VGACLK            |   0.000|
-POS_X<3>    |    5.460(R)|VGACLK            |   0.000|
-POS_X<4>    |    5.493(R)|VGACLK            |   0.000|
-POS_X<5>    |    5.453(R)|VGACLK            |   0.000|
-POS_X<6>    |    6.313(R)|VGACLK            |   0.000|
-POS_X<7>    |    6.471(R)|VGACLK            |   0.000|
-POS_X<8>    |    5.487(R)|VGACLK            |   0.000|
-POS_X<9>    |    5.733(R)|VGACLK            |   0.000|
-POS_X<10>   |    6.110(R)|VGACLK            |   0.000|
-R<0>        |    7.918(R)|VGACLK            |   0.000|
-R<1>        |    8.106(R)|VGACLK            |   0.000|
-R<2>        |    8.267(R)|VGACLK            |   0.000|
+B<0>        |    8.543(R)|VGACLK            |   0.000|
+B<1>        |    7.566(R)|VGACLK            |   0.000|
+DISPLAY_EN  |    6.808(R)|VGACLK            |   0.000|
+G<0>        |    7.756(R)|VGACLK            |   0.000|
+G<1>        |    7.762(R)|VGACLK            |   0.000|
+G<2>        |    8.201(R)|VGACLK            |   0.000|
+HSYNC       |    6.212(R)|VGACLK            |   0.000|
+POS_X<0>    |    4.822(R)|VGACLK            |   0.000|
+POS_X<1>    |    5.598(R)|VGACLK            |   0.000|
+POS_X<2>    |    6.285(R)|VGACLK            |   0.000|
+POS_X<3>    |    4.836(R)|VGACLK            |   0.000|
+POS_X<4>    |    6.634(R)|VGACLK            |   0.000|
+POS_X<5>    |    6.521(R)|VGACLK            |   0.000|
+POS_X<6>    |    6.070(R)|VGACLK            |   0.000|
+POS_X<7>    |    6.006(R)|VGACLK            |   0.000|
+POS_X<8>    |    5.701(R)|VGACLK            |   0.000|
+POS_X<9>    |    6.472(R)|VGACLK            |   0.000|
+POS_X<10>   |    5.442(R)|VGACLK            |   0.000|
+R<0>        |    7.400(R)|VGACLK            |   0.000|
+R<1>        |    7.483(R)|VGACLK            |   0.000|
+R<2>        |    8.077(R)|VGACLK            |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock FCLK
@@ -72,25 +72,25 @@ Clock to Setup on destination clock FCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-FCLK           |    4.411|         |         |         |
+FCLK           |    4.398|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-PIXEL_DATA<0>  |B<0>           |    9.215|
-PIXEL_DATA<1>  |B<1>           |    9.101|
-PIXEL_DATA<2>  |G<0>           |    8.351|
-PIXEL_DATA<3>  |G<1>           |    7.373|
-PIXEL_DATA<4>  |G<2>           |    8.066|
-PIXEL_DATA<5>  |R<0>           |    7.300|
-PIXEL_DATA<6>  |R<1>           |    6.929|
-PIXEL_DATA<7>  |R<2>           |    7.169|
+PIXEL_DATA<0>  |B<0>           |    9.117|
+PIXEL_DATA<1>  |B<1>           |    8.703|
+PIXEL_DATA<2>  |G<0>           |    8.111|
+PIXEL_DATA<3>  |G<1>           |    7.686|
+PIXEL_DATA<4>  |G<2>           |    8.111|
+PIXEL_DATA<5>  |R<0>           |    7.252|
+PIXEL_DATA<6>  |R<1>           |    6.946|
+PIXEL_DATA<7>  |R<2>           |    7.179|
 ---------------+---------------+---------+
 
 
-Analysis completed Wed Jul  6 15:46:17 2016 
+Analysis completed Mon Jul 25 13:55:42 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

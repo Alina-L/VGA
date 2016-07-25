@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
-module vertical_count #(parameter SYNC_PULSE   = 11'd6,
-											 WHOLE_FRAME  = 11'd806,
-											 FRONT_PORCH  = 11'd3,
-											 BACK_PORCH   = 11'd29,
-											 VISIBLE_AREA = 11'd768
+module vertical_count #(parameter SYNC_PULSE   = 11'd2,
+											 WHOLE_FRAME  = 11'd449,
+											 FRONT_PORCH  = 11'd37,
+											 BACK_PORCH   = 11'd60,
+											 VISIBLE_AREA = 11'd350
 	)(
 	input 		slow_clock,
 	input enable,

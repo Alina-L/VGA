@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 module horizontal_count
-	#(parameter SYNC_PULSE = 11'd136,
-					WHOLE_LINE = 11'd1328,
-					FRONT_PORCH = 11'd24,
-					BACK_PORCH = 11'd144,
-					VISIBLE_AREA = 11'd1024
+	#(parameter SYNC_PULSE = 11'd96,
+					WHOLE_LINE = 11'd800,
+					FRONT_PORCH = 11'd16,
+					BACK_PORCH = 11'd48,
+					VISIBLE_AREA = 11'd640
 					)(
 	input slow_clock,
 	output [10:0] out_horizontal_counter,

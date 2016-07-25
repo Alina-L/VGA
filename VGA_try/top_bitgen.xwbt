@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/student/vga/VGA_try/top.ncd
-OUTFILE=/home/student/vga/VGA_try/top.bit
+INFILE=/home/student/Desktop/VGA/VGA_try/top.ncd
+OUTFILE=/home/student/Desktop/VGA/VGA_try/top.bit
 FAMILY=Spartan3E
 PART=xc3s500e-5fg320
-WORKINGDIR=/home/student/vga/VGA_try
+WORKINGDIR=/home/student/Desktop/VGA/VGA_try
 LICENSE=WebPack
 USER_INFO=202860492_0_0_807
