@@ -1,0 +1,14 @@
+# Output products list for <DSP>
+DSP/doc/dsp48_macro_ds754.pdf
+DSP/doc/xbip_dsp48_macro_v2_1_readme.txt
+DSP/doc/xbip_dsp48_macro_v2_1_vinfo.html
+DSP.asy
+DSP.gise
+DSP.ngc
+DSP.sym
+DSP.v
+DSP.veo
+DSP.xco
+DSP.xise
+DSP_flist.txt
+DSP_xmdf.tcl

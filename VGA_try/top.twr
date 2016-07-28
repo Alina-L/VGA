@@ -39,32 +39,66 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock FCLK
+-------------+------------+------------+------------------+--------+
+             |Max Setup to|Max Hold to |                  | Clock  |
+Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------------+--------+
+PIXEL_DATA<0>|    4.158(R)|   -2.392(R)|VGACLK            |   0.000|
+PIXEL_DATA<1>|    4.741(R)|   -2.858(R)|VGACLK            |   0.000|
+PIXEL_DATA<2>|    4.190(R)|   -2.423(R)|VGACLK            |   0.000|
+PIXEL_DATA<3>|    4.433(R)|   -2.618(R)|VGACLK            |   0.000|
+PIXEL_DATA<4>|    3.386(R)|   -1.779(R)|VGACLK            |   0.000|
+PIXEL_DATA<5>|    3.884(R)|   -2.173(R)|VGACLK            |   0.000|
+PIXEL_DATA<6>|    3.826(R)|   -2.127(R)|VGACLK            |   0.000|
+PIXEL_DATA<7>|    4.222(R)|   -2.436(R)|VGACLK            |   0.000|
+tSCL         |    3.966(F)|   -0.815(F)|FCLK_IBUFG        |   0.000|
+tSDA         |    3.958(F)|   -0.806(F)|FCLK_IBUFG        |   0.000|
+-------------+------------+------------+------------------+--------+
+
 Clock FCLK to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-B<0>        |    8.543(R)|VGACLK            |   0.000|
-B<1>        |    7.566(R)|VGACLK            |   0.000|
-DISPLAY_EN  |    6.808(R)|VGACLK            |   0.000|
-G<0>        |    7.756(R)|VGACLK            |   0.000|
-G<1>        |    7.762(R)|VGACLK            |   0.000|
-G<2>        |    8.201(R)|VGACLK            |   0.000|
-HSYNC       |    6.212(R)|VGACLK            |   0.000|
-POS_X<0>    |    4.822(R)|VGACLK            |   0.000|
-POS_X<1>    |    5.598(R)|VGACLK            |   0.000|
-POS_X<2>    |    6.285(R)|VGACLK            |   0.000|
-POS_X<3>    |    4.836(R)|VGACLK            |   0.000|
-POS_X<4>    |    6.634(R)|VGACLK            |   0.000|
-POS_X<5>    |    6.521(R)|VGACLK            |   0.000|
-POS_X<6>    |    6.070(R)|VGACLK            |   0.000|
-POS_X<7>    |    6.006(R)|VGACLK            |   0.000|
-POS_X<8>    |    5.701(R)|VGACLK            |   0.000|
-POS_X<9>    |    6.472(R)|VGACLK            |   0.000|
-POS_X<10>   |    5.442(R)|VGACLK            |   0.000|
-R<0>        |    7.400(R)|VGACLK            |   0.000|
-R<1>        |    7.483(R)|VGACLK            |   0.000|
-R<2>        |    8.077(R)|VGACLK            |   0.000|
+ANODE<2>    |    7.264(R)|FCLK_IBUFG        |   0.000|
+ANODE<3>    |    6.513(R)|FCLK_IBUFG        |   0.000|
+B<0>        |    5.899(R)|VGACLK            |   0.000|
+B<1>        |    6.290(R)|VGACLK            |   0.000|
+DISPLAY_EN  |    5.850(R)|VGACLK            |   0.000|
+G<0>        |    5.957(R)|VGACLK            |   0.000|
+G<1>        |    5.759(R)|VGACLK            |   0.000|
+G<2>        |    6.007(R)|VGACLK            |   0.000|
+HSYNC       |    8.110(R)|VGACLK            |   0.000|
+POS_X<0>    |    4.569(R)|VGACLK            |   0.000|
+POS_X<1>    |    4.594(R)|VGACLK            |   0.000|
+POS_X<2>    |    5.422(R)|VGACLK            |   0.000|
+POS_X<3>    |    5.052(R)|VGACLK            |   0.000|
+POS_X<4>    |    5.979(R)|VGACLK            |   0.000|
+POS_X<5>    |    5.897(R)|VGACLK            |   0.000|
+POS_X<6>    |    5.835(R)|VGACLK            |   0.000|
+POS_X<7>    |    5.632(R)|VGACLK            |   0.000|
+POS_X<8>    |    6.049(R)|VGACLK            |   0.000|
+POS_X<9>    |    5.226(R)|VGACLK            |   0.000|
+POS_X<10>   |    5.984(R)|VGACLK            |   0.000|
+R<0>        |    5.989(R)|VGACLK            |   0.000|
+R<1>        |    5.658(R)|VGACLK            |   0.000|
+R<2>        |    7.342(R)|VGACLK            |   0.000|
+SEG1<1>     |    8.574(R)|FCLK_IBUFG        |   0.000|
+SEG1<2>     |    8.894(R)|FCLK_IBUFG        |   0.000|
+SEG1<3>     |    8.456(R)|FCLK_IBUFG        |   0.000|
+SEG1<4>     |    8.680(R)|FCLK_IBUFG        |   0.000|
+SEG1<5>     |    8.714(R)|FCLK_IBUFG        |   0.000|
+SEG1<6>     |    8.296(R)|FCLK_IBUFG        |   0.000|
+SEG1<7>     |    9.043(R)|FCLK_IBUFG        |   0.000|
+tSCANCODE<0>|    5.610(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<1>|    5.614(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<2>|    5.607(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<3>|    5.614(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<4>|    5.613(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<5>|    5.613(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<6>|    5.610(F)|FCLK_IBUFG        |   0.000|
+tSCANCODE<7>|    5.615(F)|FCLK_IBUFG        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock FCLK
@@ -72,32 +106,18 @@ Clock to Setup on destination clock FCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-FCLK           |    4.398|         |         |         |
+FCLK           |    6.971|    2.235|         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-PIXEL_DATA<0>  |B<0>           |    9.117|
-PIXEL_DATA<1>  |B<1>           |    8.703|
-PIXEL_DATA<2>  |G<0>           |    8.111|
-PIXEL_DATA<3>  |G<1>           |    7.686|
-PIXEL_DATA<4>  |G<2>           |    8.111|
-PIXEL_DATA<5>  |R<0>           |    7.252|
-PIXEL_DATA<6>  |R<1>           |    6.946|
-PIXEL_DATA<7>  |R<2>           |    7.179|
----------------+---------------+---------+
 
-
-Analysis completed Mon Jul 25 13:55:42 2016 
+Analysis completed Thu Jul 28 18:39:27 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 348 MB
+Peak Memory Usage: 432 MB
 
 
 
