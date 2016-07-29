@@ -9,35 +9,36 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 28 18:36:26 2016
+Mapped Date    : Fri Jul 29 13:59:07 2016
 
 Mapping design into LUTs...
 Running directed packing...
-WARNING:Pack:266 - The function generator line_mux0000<0>111 failed to merge
-   with F5 multiplexer need_mux0000.  There is a conflict for the FXMUX.  The
-   design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator grid_111_mux0000341_SW1 failed to
-   merge with F5 multiplexer grid_111_mux0000300_SW0.  There is a conflict for
-   the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator grid_103_mux0000341_SW1 failed to
-   merge with F5 multiplexer grid_103_mux0000300_SW0.  There is a conflict for
-   the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator grid_107_mux0000341_SW1 failed to
-   merge with F5 multiplexer grid_107_mux0000300_SW0.  There is a conflict for
-   the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator grid_123_mux0000341_SW1 failed to
-   merge with F5 multiplexer grid_123_mux0000300_SW0.  There is a conflict for
-   the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator grid_119_mux0000341_SW1 failed to
-   merge with F5 multiplexer grid_119_mux0000300_SW0.  There is a conflict for
-   the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator grid_41_and00002 failed to merge with
+   F5 multiplexer grid_41_mux0000260_SW1.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator grid_25_and00002 failed to merge with
+   F5 multiplexer grid_25_mux0000257_SW1.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator grid_17_and00002 failed to merge with
+   F5 multiplexer grid_17_mux00002631_SW1.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator grid_33_and00003 failed to merge with
+   F5 multiplexer grid_33_mux00002661_SW1.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator grid_65_and00003 failed to merge with
+   F5 multiplexer grid_65_mux0000281_SW1.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator grid_9_and00001 failed to merge with
+   F5 multiplexer grid_9_mux0000269_SW0.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
+Running unrelated packing...
 Updating timing models...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_X_cmp_ge0000 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_Y_cmp_ge0000 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_Y_cmp_ge0000 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_X_cmp_ge0000 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 
@@ -48,18 +49,18 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    8
 Logic Utilization:
-  Total Number Slice Registers:         416 out of   9,312    4%
-    Number used as Flip Flops:          406
+  Total Number Slice Registers:         295 out of   9,312    3%
+    Number used as Flip Flops:          285
     Number used as Latches:              10
-  Number of 4 input LUTs:             7,609 out of   9,312   81%
+  Number of 4 input LUTs:             9,023 out of   9,312   96%
 Logic Distribution:
-  Number of occupied Slices:          4,093 out of   4,656   87%
-    Number of Slices containing only related logic:   4,093 out of   4,093 100%
-    Number of Slices containing unrelated logic:          0 out of   4,093   0%
+  Number of occupied Slices:          4,654 out of   4,656   99%
+    Number of Slices containing only related logic:   4,654 out of   4,654 100%
+    Number of Slices containing unrelated logic:          0 out of   4,654   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       7,759 out of   9,312   83%
-    Number used as logic:             7,609
-    Number used as a route-thru:        150
+  Total Number of 4 input LUTs:       9,114 out of   9,312   97%
+    Number used as logic:             9,023
+    Number used as a route-thru:         91
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -68,13 +69,12 @@ Logic Distribution:
     IOB Flip Flops:                      10
   Number of BUFGMUXs:                     4 out of      24   16%
   Number of DCMs:                         1 out of       4   25%
-  Number of MULT18X18SIOs:                4 out of      20   20%
 
-Average Fanout of Non-Clock Nets:                4.01
+Average Fanout of Non-Clock Nets:                4.02
 
-Peak Memory Usage:  659 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  669 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   6 secs 
 
 NOTES:
 

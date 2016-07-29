@@ -1,14 +1,14 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 28 18:39:31 2016
+Fri Jul 29 14:03:19 2016
 
 drc -z top.ncd top.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_X_cmp_ge0000 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_Y_cmp_ge0000 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_Y_cmp_ge0000 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net myGrid/GRID_X_cmp_ge0000 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
